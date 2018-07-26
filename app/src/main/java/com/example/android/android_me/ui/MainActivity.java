@@ -25,7 +25,9 @@ import com.example.android.android_me.R;
 // This activity is responsible for displaying the master list of all images
 // Implement the MasterListFragment callback, OnImageClickListener
 public class MainActivity extends AppCompatActivity implements MasterListFragment.OnImageClickListener{
-
+    private int headIndex;
+    private int bodyIndex;
+    private int legIndex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements MasterListFragmen
         Toast.makeText(this, "Position clicked = " + position, Toast.LENGTH_SHORT).show();
 
         // TODO (2) Based on where a user has clicked, store the selected list index for the head, body, and leg BodyPartFragments
-
+        int bodyPartNumber = position/12;
         // TODO (3) Put this information in a Bundle and attach it to an Intent that will launch an AndroidMeActivity
 
         // TODO (4) Get a reference to the "Next" button and launch the intent when this button is clicked
